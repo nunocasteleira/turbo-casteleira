@@ -17,7 +17,7 @@ importers:
         specifier: latest
         version: 1.9.3
 
-  apps/docs:
+  apps/casteleira.xyz:
     dependencies:
       next:
         specifier: latest
@@ -37,10 +37,10 @@ importers:
         version: 17.0.45
       '@types/react':
         specifier: ^18.0.22
-        version: 18.0.25
+        version: 18.2.0
       '@types/react-dom':
         specifier: ^18.0.7
-        version: 18.0.9
+        version: 18.2.1
       eslint-config-custom:
         specifier: workspace:*
         version: link:../../packages/eslint-config-custom
@@ -51,7 +51,7 @@ importers:
         specifier: ^4.5.3
         version: 4.9.3
 
-  apps/web:
+  apps/docs:
     dependencies:
       next:
         specifier: latest
@@ -338,7 +338,7 @@ packages:
   /@types/react-dom@18.0.9:
     resolution: {integrity: sha512-qnVvHxASt/H7i+XG1U1xMiY5t+IHcPGUK7TDMDzom08xa7e86eCeKOiLZezwCKVxJn6NEiiy2ekgX8aQssjIKg==}
     dependencies:
-      '@types/react': 18.0.25
+      '@types/react': 18.2.0
     dev: true
 
   /@types/react-dom@18.2.1:
