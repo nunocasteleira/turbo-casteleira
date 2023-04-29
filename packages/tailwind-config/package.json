@@ -1,0 +1,13 @@
+{
+  "name": "tailwind-config",
+  "version": "0.0.0",
+  "main": "tailwind.config.js",
+  "license": "MIT",
+  "peerDependencies": {
+    "tailwindcss": "^3.3.2",
+    "postcss": "^8.4.23"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
