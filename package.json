@@ -1,8 +1,8 @@
 {
   "author": {
-    "name" : "Nuno Casteleira",
-    "email" : "nunojoaocas@gmail.com",
-    "url" : "https://casteleira.xyz/"
+    "name": "Nuno Casteleira",
+    "email": "nunojoaocas@gmail.com",
+    "url": "https://casteleira.xyz/"
   },
   "private": true,
   "scripts": {
@@ -16,7 +16,7 @@
   "devDependencies": {
     "eslint": "^7.32.0",
     "eslint-config-custom": "workspace:*",
-    "prettier": "^2.5.1",
+    "prettier": "^2.8.8",
     "turbo": "latest"
   },
   "packageManager": "pnpm@7.15.0",
