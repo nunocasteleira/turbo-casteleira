@@ -1,5 +1,10 @@
 {
-  "name": "web",
+  "name": "casteleira.xyz",
+  "author": {
+    "name" : "Nuno Casteleira",
+    "email" : "nunojoaocas@gmail.com",
+    "url" : "https://casteleira.xyz/"
+  },
   "version": "1.0.0",
   "private": true,
   "scripts": {

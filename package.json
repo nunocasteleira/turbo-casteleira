@@ -1,8 +1,14 @@
 {
+  "author": {
+    "name" : "Nuno Casteleira",
+    "email" : "nunojoaocas@gmail.com",
+    "url" : "https://casteleira.xyz/"
+  },
   "private": true,
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
+    "dev:xyz": "turbo run dev --filter=casteleira.xyz",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "turbo run lint",
     "preinstall": "npx only-allow pnpm"
