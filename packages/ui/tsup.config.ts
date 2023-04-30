@@ -5,7 +5,6 @@ export default defineConfig((options: Options) => ({
   splitting: true,
   entry: ["src/**/*.tsx"],
   format: ["esm"],
-  sourcemap: true,
   dts: true,
   minify: true,
   minifyIdentifiers: false,
