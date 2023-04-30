@@ -1,3 +1,4 @@
+type Size = "small" | "medium" | "large";
 interface Props {
   /**
    * Is this the principal call to action on the page?
@@ -10,7 +11,7 @@ interface Props {
   /**
    * How large should the button be?
    */
-  size?: "small" | "medium" | "large";
+  size?: Size;
   /**
    * Button contents
    */
@@ -21,6 +22,8 @@ interface Props {
   onClick?: () => void;
 }
 
+type Mode = "primary" | "secondary";
+
 export const Button = ({
   primary = false,
   label = "Boop",
@@ -28,17 +31,23 @@ export const Button = ({
   backgroundColor,
   ...props
 }: Props) => {
+  const sizeClass: Record<Size, string> = {
+    small: "ui-text-xs ui-px-4 ui-py-2",
+    medium: "text-sm ui-px-5 ui-py-2.5",
+    large: "text-md ui-px-6 ui-py-3",
+  };
+
+  const modeClass: Record<Mode, string> = {
+    primary: "ui-text-white ui-bg-blue-500",
+    secondary: "ui-text-gray-900 ui-bg-transparent ui-shadow-md",
+  };
+
+  const mode: Mode = primary ? "primary" : "secondary";
+
   return (
     <button
-      className={`
-        ${size === "small" && "ui-text-xs ui-px-4 ui-py-2"}
-        ${size === "medium" && "text-sm ui-px-5 ui-py-2.5"}
-        ${size === "large" && "text-md ui-px-6 ui-py-3"}
-        ${
-          primary
-            ? "ui-text-white ui-bg-blue-500"
-            : "ui-text-gray-900 ui-bg-transparent ui-shadow-md"
-        }
+      className={`${sizeClass[size]}
+      ${modeClass[mode]}
         ui-font-bold ui-border-0 ui-rounded-[3em] ui-cursor-pointer ui-inline-block ui-leading-none
       `}
       style={{ backgroundColor }}
