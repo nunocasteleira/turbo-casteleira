@@ -11,6 +11,7 @@
     "dev:xyz": "turbo run dev --filter=casteleira.xyz",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
     "preinstall": "npx only-allow pnpm"
   },
   "devDependencies": {
