@@ -1,6 +1,6 @@
+import { Lora, Poppins, Space_Mono } from "next/font/google";
 import "ui/styles.css";
 import "./globals.css";
-import { Lora, Poppins, Space_Mono } from "next/font/google";
 
 const lora = Lora({
   subsets: ["latin"],
