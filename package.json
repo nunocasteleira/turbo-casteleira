@@ -8,7 +8,7 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
-    "dev:xyz": "turbo run dev --filter=casteleira.xyz...",
+    "dev:xyz": "turbo run dev --filter=xyz...",
     "dev:story": "turbo run dev --filter=workshop...",
     "dev:ui": "turbo run dev --filter=ui",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
