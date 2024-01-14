@@ -25,3 +25,16 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+@layer base {
+  a {
+    @apply underline;
+  }
+
+  @layer components {
+    .markdown {
+      @apply prose prose-slate dark:prose-invert prose-h1:text-2xl prose-h1:font-semibold
+    }
+  }
+}
+
