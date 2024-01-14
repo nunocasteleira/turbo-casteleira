@@ -11,7 +11,7 @@ export default async function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24 [&_*]:min-w-0">
-      <div className="flex max-w-md flex-col overflow-hidden rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-900 dark:bg-slate-800">
+      <div className="flex max-w-md flex-col overflow-hidden rounded-lg bg-slate-200 text-slate-900 dark:bg-slate-800">
         <div className="h-full w-full flex-auto">
           <div className="relative aspect-[4/3] h-full w-full">
             <Image
