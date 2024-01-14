@@ -12,7 +12,7 @@ import {
 export type SocialLink = {
   icon: IconDefinition;
   alt: string;
-  href: string;
+  href?: string;
   className?: string;
 };
 
@@ -20,29 +20,25 @@ export const links: SocialLink[] = [
   {
     icon: faImages,
     alt: "Images Portfolio",
-    href: "#",
-    className: "mt-1",
+    className: "mt-0.5",
   },
   {
     icon: faLaptopCode,
     alt: "Coding Projects",
-    href: "#",
-    className: "mt-1",
+    className: "mt-0.5",
   },
   {
     icon: faMusic,
     alt: "Music Portfolio",
-    href: "#",
-    className: "mt-1",
   },
   {
     icon: faGithub,
     alt: "GitHub",
-    href: "#",
+    href: "https://github.com/nunocasteleira",
   },
   {
     icon: faLinkedin,
     alt: "LinkedIn",
-    href: "#",
+    href: "https://www.linkedin.com/in/nunocasteleira/",
   },
 ];

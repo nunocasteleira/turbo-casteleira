@@ -17,10 +17,6 @@ export default function Icon() {
     (
       // ImageResponse JSX element
       <div
-        // className={clsx(
-        //   GeistSans.className,
-        //   "text-2xl bg-slate-900 w-full h-full flex items-center justify-center text-slate-200 rounded-full"
-        // )}
         style={{
           fontFamily: GeistSans.className,
           fontSize: 18,

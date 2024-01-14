@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import clsx from "clsx";
 import { promises as fs } from "fs";
 import Image from "next/image";
+import Link from "next/link";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { links, SocialLink } from "@/app/links";
 
@@ -40,12 +41,26 @@ export default async function Home() {
 }
 
 function SocialLink({ link }: { link: SocialLink }) {
+  function Inside({ link }: { link: SocialLink }) {
+    return (
+      <>
+        <div className={clsx("h-6 w-6", link.className)}>
+          <FontAwesomeIcon icon={link.icon} />
+        </div>
+        <span className="sr-only">{link.alt}</span>
+      </>
+    );
+  }
+
   return (
     <li className="rounded-full dark:text-slate-200">
-      <div className={clsx("h-6 w-6", link.className)}>
-        <FontAwesomeIcon icon={link.icon} />
-      </div>
-      <span className="sr-only">{link.alt}</span>
+      {link.href ? (
+        <Link href={link.href}>
+          <Inside link={link} />
+        </Link>
+      ) : (
+        <Inside link={link} />
+      )}
     </li>
   );
 }
