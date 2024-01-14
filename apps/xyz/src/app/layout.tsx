@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${poppins.variable} ${lora.variable} ${spaceMono.variable} text-gray-900 bg-gray-100 font-sans`}
+      className={`${poppins.variable} ${lora.variable} ${spaceMono.variable} bg-gray-100 font-sans text-gray-900`}
     >
       <body>{children}</body>
     </html>
