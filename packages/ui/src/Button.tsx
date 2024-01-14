@@ -29,7 +29,7 @@ const buttonStyles = cva(
       intent: "secondary",
       size: "medium",
     },
-  }
+  },
 );
 
 interface Props extends ButtonProps, VariantProps<typeof buttonStyles> {}

@@ -11,24 +11,24 @@ export default async function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24 [&_*]:min-w-0">
-      <div className="flex flex-col bg-slate-200 dark:bg-slate-800 text-slate-900 max-w-md rounded-lg overflow-hidden">
-        <div className="flex-auto w-full h-full">
-          <div className="aspect-[4/3] relative w-full h-full">
+      <div className="flex max-w-md flex-col overflow-hidden rounded-lg bg-slate-200 text-slate-900 dark:bg-slate-800">
+        <div className="h-full w-full flex-auto">
+          <div className="relative aspect-[4/3] h-full w-full">
             <Image
-              className="object-cover w-full h-full"
+              className="h-full w-full object-cover"
               fill
               src={"/me.jpg"}
               alt="Headshot of Nuno João Casteleira"
             />
           </div>
         </div>
-        <div className="flex-auto w-full min-h-full py-8 px-8">
+        <div className="min-h-full w-full flex-auto px-8 py-8">
           <div className="markdown">
             {/* @ts-ignore */}
             <MDXRemote source={file} />
           </div>
           <div className="p-4" />
-          <ul className="flex flex-row gap-6 justify-between">
+          <ul className="flex flex-row justify-between gap-6">
             {links.map((link) => (
               <SocialLink link={link} key={link.alt} />
             ))}
@@ -42,7 +42,7 @@ export default async function Home() {
 function SocialLink({ link }: { link: SocialLink }) {
   return (
     <li className="rounded-full dark:text-slate-200">
-      <div className={clsx("w-6 h-6", link.className)}>
+      <div className={clsx("h-6 w-6", link.className)}>
         <FontAwesomeIcon icon={link.icon} />
       </div>
       <span className="sr-only">{link.alt}</span>
