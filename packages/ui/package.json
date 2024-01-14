@@ -4,8 +4,8 @@
   "sideEffects": [
     "**/*.css"
   ],
-  "types": "./dist/index.d.ts",
-  "main": "./dist/index.ts",
+  "types": "./dist/index.d.mts",
+  "main": "./dist/index.mjs",
   "exports": {
     ".": "./dist",
     "./styles.css": "./dist/index.css"
@@ -29,6 +29,6 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "cva": "npm:class-variance-authority@^0.6.0"
+    "cva": "npm:class-variance-authority@^0.7.0"
   }
 }
