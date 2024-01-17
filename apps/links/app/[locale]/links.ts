@@ -9,9 +9,11 @@ import {
   faMusic,
 } from "@fortawesome/free-solid-svg-icons";
 
+type Socials = "linkedin" | "code" | "github" | "music" | "photos";
+
 export type SocialLink = {
   icon: IconDefinition;
-  alt: string;
+  social: Socials;
   href?: string;
   className?: string;
 };
@@ -19,26 +21,26 @@ export type SocialLink = {
 export const links: SocialLink[] = [
   {
     icon: faImages,
-    alt: "Images Portfolio",
+    social: "photos",
     className: "mt-0.5",
   },
   {
     icon: faLaptopCode,
-    alt: "Coding Projects",
+    social: "code",
     className: "mt-0.5",
   },
   {
     icon: faMusic,
-    alt: "Music Portfolio",
+    social: "music",
   },
   {
     icon: faGithub,
-    alt: "GitHub",
+    social: "github",
     href: "https://github.com/nunocasteleira",
   },
   {
     icon: faLinkedin,
-    alt: "LinkedIn",
+    social: "linkedin",
     href: "https://www.linkedin.com/in/nunocasteleira/",
   },
 ];

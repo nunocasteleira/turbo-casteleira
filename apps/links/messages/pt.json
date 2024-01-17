@@ -1,0 +1,17 @@
+{
+  "Index": {
+    "title": "Olá, mundo!",
+    "image-alt": "Retrato de Nuno João Casteleira",
+    "translate": "Read it in English"
+  },
+  "Metadata": {
+    "description": "Uma página de links"
+  },
+  "Links": {
+    "linkedin": "LinkedIn",
+    "code": "Projetos de Código",
+    "github": "GitHub",
+    "music": "Portfolio Musical",
+    "photos": "Portfolio Fotográfico"
+  }
+}

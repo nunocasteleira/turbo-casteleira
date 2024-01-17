@@ -1,0 +1,17 @@
+{
+  "Index": {
+    "title": "Hello world!",
+    "image-alt": "Headshot of Nuno João Casteleira",
+    "translate": "Ler em Português"
+  },
+  "Metadata": {
+    "description": "A link tree page"
+  },
+  "Links": {
+    "linkedin": "LinkedIn",
+    "code": "Coding Projects",
+    "github": "GitHub",
+    "music": "Music Portfolio",
+    "photos": "Photography Portfolio"
+  }
+}
