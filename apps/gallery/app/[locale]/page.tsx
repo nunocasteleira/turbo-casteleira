@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
+import Projects from "./components/projects";
 
 export default function Home({
   params: { locale },
@@ -10,8 +11,9 @@ export default function Home({
 
   const t = useTranslations("Index");
   return (
-    <main className="min-h-full">
-      <h1>{t("title")}</h1>
+    <main className="page-size min-h-full w-full px-4 sm:px-6">
+      <h2 className="sr-only">{t("title")}</h2>
+      <Projects />
     </main>
   );
 }

@@ -2,7 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import clsx from "clsx";
 import { getTranslations } from "next-intl/server";
-import { socials } from "socials";
+import { SocialLink, socials } from "socials";
 import { Link } from "@/navigation";
 
 const navigation = {
@@ -15,7 +15,7 @@ export default async function Footer() {
 
   return (
     <footer>
-      <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
+      <div className="page-size overflow-hidden py-20 sm:py-24">
         <nav className="flex justify-center space-x-12" aria-label="Footer">
           {navigation.main.map((item) => (
             <div key={item.name} className="pb-6">
@@ -39,13 +39,14 @@ async function SocialLinks() {
   return (
     <div className="mt-10 flex justify-center space-x-10">
       {socials.map((link) => (
-        <SocialLink link={link} />
+        <SocialLinkComponent link={link} key={link.social} />
       ))}
     </div>
   );
 }
 
-async function SocialLink({ link }: { link: SocialLink }) {
+async function SocialLinkComponent({ link }: { link: SocialLink }) {
+  // @ts-expect-error
   const t = await getTranslations("Links");
   const Comp = "href" in link ? Link : "div";
 
@@ -58,6 +59,7 @@ async function SocialLink({ link }: { link: SocialLink }) {
       >
         <FontAwesomeIcon icon={link.icon} />
         <span className="sr-only" id={`${link.social}-alt`}>
+          {/* @ts-expect-error */}
           {t(link.social)}
         </span>
       </Comp>
