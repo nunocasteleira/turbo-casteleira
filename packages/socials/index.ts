@@ -18,7 +18,7 @@ export type SocialLink = {
   className?: string;
 };
 
-export const links: SocialLink[] = [
+export const socials: SocialLink[] = [
   {
     icon: faImages,
     social: "photos",

@@ -9,5 +9,9 @@ export default function Home({
   unstable_setRequestLocale(locale);
 
   const t = useTranslations("Index");
-  return <h1>{t("title")}</h1>;
+  return (
+    <main className="min-h-full">
+      <h1>{t("title")}</h1>
+    </main>
+  );
 }
