@@ -24,6 +24,58 @@ importers:
         specifier: ^1.11.3
         version: 1.11.3
 
+  apps/gallery:
+    dependencies:
+      clsx:
+        specifier: ^2.1.0
+        version: 2.1.0
+      geist:
+        specifier: ^1.2.1
+        version: 1.2.1(next@14.0.4)
+      next:
+        specifier: 14.0.4
+        version: 14.0.4(react-dom@18.2.0)(react@18.2.0)
+      next-intl:
+        specifier: ^3.4.4
+        version: 3.4.4(next@14.0.4)(react@18.2.0)
+      react:
+        specifier: ^18
+        version: 18.2.0
+      react-dom:
+        specifier: ^18
+        version: 18.2.0(react@18.2.0)
+      tailwind-config:
+        specifier: workspace:*
+        version: link:../../packages/tailwind-config
+    devDependencies:
+      '@types/node':
+        specifier: ^20
+        version: 20.11.0
+      '@types/react':
+        specifier: ^18
+        version: 18.2.47
+      '@types/react-dom':
+        specifier: ^18
+        version: 18.2.18
+      autoprefixer:
+        specifier: ^10.0.1
+        version: 10.4.16(postcss@8.4.33)
+      eslint:
+        specifier: ^8
+        version: 8.56.0
+      eslint-config-custom:
+        specifier: workspace:*
+        version: link:../../packages/eslint-config-custom
+      postcss:
+        specifier: ^8
+        version: 8.4.33
+      tailwindcss:
+        specifier: ^3.3.0
+        version: 3.4.1
+      typescript:
+        specifier: ^5.3.3
+        version: 5.3.3
+
   apps/links:
     dependencies:
       '@fortawesome/fontawesome-svg-core':
@@ -4145,7 +4197,7 @@ packages:
   /@types/node-fetch@2.6.10:
     resolution: {integrity: sha512-PPpPK6F9ALFTn59Ka3BaL+qGuipRfxNE8qVgkp0bVixeiR2c2/L+IVOiBdu9JhhT22sWnQEp6YyHGI2b2+CMcA==}
     dependencies:
-      '@types/node': 18.19.6
+      '@types/node': 20.11.0
       form-data: 4.0.0
     dev: true
 
