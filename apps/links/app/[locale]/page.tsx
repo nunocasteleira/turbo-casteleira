@@ -16,7 +16,6 @@ export default async function Home({
   params: { locale: string };
 }) {
   unstable_setRequestLocale(locale);
-  const t = await getTranslations("Index");
   const file = await fs.readFile(
     process.cwd() + `/app/[locale]/text/${locale}.mdx`,
     "utf8",
@@ -82,7 +81,7 @@ async function LocaleLink({ locale }: { locale: string }) {
     <Link
       href="/"
       locale={otherLocale}
-      className="flex items-center justify-end gap-2"
+      className="flex items-center justify-end gap-2 dark:text-slate-200"
     >
       {t("translate")}
       <span className={clsx("flex h-4 w-4")}>
