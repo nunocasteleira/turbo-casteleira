@@ -1,8 +1,18 @@
 {
+  "Footer": {
+    "allRightsReserved": "All rights reserved.",
+    "footer": "Footer"
+  },
+  "Header": {
+    "header": "Header",
+    "skipToContent": "Skip to content"
+  },
   "Index": {
     "title": "Hello world!"
   },
-  "Header": {
-    "skipToContent": "Skip to content"
+  "Metadata": {
+    "title": "Nuno João Casteleira",
+    "author": "Nuno João Casteleira",
+    "description": "A photo gallery"
   }
 }

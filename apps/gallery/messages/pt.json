@@ -1,0 +1,20 @@
+{
+  "Footer": {
+    "allRightsReserved": "Todos os direitos reservados.",
+    "footer": "Rodapé"
+  },
+  "Header": {
+    "header": "Cabeçalho",
+    "skipToContent": "Saltar para conteúdo"
+  },
+  "Index": {
+    "title": "Olá, mundo!",
+    "image-alt": "Retrato de Nuno João Casteleira",
+    "translate": "Read it in English"
+  },
+  "Metadata": {
+    "title": "Nuno João Casteleira",
+    "author": "Nuno João Casteleira",
+    "description": "Uma galeria de fotos"
+  }
+}

@@ -1,3 +1,4 @@
+import React from "react";
 import {
   faGithub,
   faLinkedin,
@@ -44,3 +45,19 @@ export const socials: SocialLink[] = [
     href: "https://www.linkedin.com/in/nunocasteleira/",
   },
 ];
+
+export const enSocialTranslations: Record<Socials, string> = {
+  linkedin: "LinkedIn",
+  code: "Coding Projects",
+  github: "GitHub",
+  music: "Music Portfolio",
+  photos: "Photography Portfolio",
+};
+
+export const ptSocialTranslations: Record<Socials, string> = {
+  linkedin: "LinkedIn",
+  code: "Projetos de Código",
+  github: "GitHub",
+  music: "Portfolio Musical",
+  photos: "Portfolio Fotográfico",
+};

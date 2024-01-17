@@ -1,20 +1,17 @@
-import type { Config } from 'tailwindcss'
+const sharedConfig = require("tailwind-config/tailwind.config");
+const { fontFamily } = require("tailwindcss/defaultTheme");
 
-const config: Config = {
-  content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
+/** @type {import('tailwindcss').Config} \*/
+module.exports = {
+  ...sharedConfig,
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      fontFamily: {
+        sans: ["var(--font-poppins)", ...fontFamily.sans],
+        serif: ["var(--font-lora)", ...fontFamily.serif],
+        mono: ["var(--font-space-mono)", ...fontFamily.mono],
       },
     },
   },
-  plugins: [],
-}
-export default config
+  plugins: [require("@tailwindcss/typography")],
+};

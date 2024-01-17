@@ -15,7 +15,8 @@ export const generateMetadata = async ({
   const t = await getTranslations({ locale, namespace: "Metadata" });
 
   return {
-    title: "Nuno João Casteleira",
+    title: t("title"),
+    authors: { name: t("author") },
     description: t("description"),
   };
 };
@@ -37,7 +38,8 @@ export default async function LocaleLayout({
       <body
         className={clsx(
           GeistSans.className,
-          "bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-300",
+          "app-background",
+          "text-slate-900 dark:text-slate-300",
           "grid min-h-screen grid-rows-[auto_1fr_auto]",
         )}
       >
