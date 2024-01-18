@@ -8,7 +8,7 @@ import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { locales } from "@/locale-config";
 import { Link } from "@/navigation";
-import { links, SocialLink } from "./links";
+import { SocialLink, socials } from "../../../../packages/socials";
 
 export default async function Home({
   params: { locale },
@@ -41,7 +41,7 @@ export default async function Home({
             <MDXRemote source={file} />
           </div>
           <ul className="flex flex-row justify-between gap-6">
-            {links.map((link) => (
+            {socials.map((link) => (
               <SocialLink link={link} key={link.social} />
             ))}
           </ul>

@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply app-background
+    }
+}
+
+.app-background {
+    @apply bg-gradient-to-b from-slate-50 to-slate-100 dark:from-slate-950 dark:to-slate-900
+}
+
+.page-size {
+   @apply mx-auto max-w-7xl p-6 lg:px-8
+}
