@@ -1,4 +1,3 @@
-import React from "react";
 import {
   faGithub,
   faLinkedin,
@@ -24,6 +23,7 @@ export const socials: SocialLink[] = [
     icon: faImages,
     social: "photos",
     className: "mt-0.5",
+    href: "https://gallery.casteleira.xyz",
   },
   {
     icon: faLaptopCode,
