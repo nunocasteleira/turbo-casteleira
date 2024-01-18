@@ -2,27 +2,27 @@
 
 import clsx from "clsx";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import cloudinaryLoader from "@/app/cloudinary-loader";
 
 type Props = {
   alt: string;
-  caption?: string;
   className?: string;
   priority?: boolean;
   src: string;
 };
 
-const Photo = ({ alt, className, caption, src, priority }: Props) => {
+const Photo = ({ alt, className, src, priority }: Props) => {
+  const t = useTranslations("Captions");
+  const caption = t(src as any);
+
   return (
     <figure>
       <div
-        className={clsx(
-          "relative block h-full w-full overflow-hidden rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100",
-          className,
-        )}
+        className={clsx("relative block overflow-hidden rounded-lg", className)}
       >
         <Image
-          alt={alt}
+          alt={alt ?? caption}
           fill
           loader={cloudinaryLoader}
           sizes="80vw"
@@ -31,6 +31,7 @@ const Photo = ({ alt, className, caption, src, priority }: Props) => {
           priority={priority}
         />
       </div>
+      {caption ? <figcaption>{caption}</figcaption> : null}
     </figure>
   );
 };

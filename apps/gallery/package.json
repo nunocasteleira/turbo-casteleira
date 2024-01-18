@@ -22,6 +22,7 @@
     "@types/mdx": "^2.0.10",
     "clsx": "^2.1.0",
     "geist": "^1.2.1",
+    "lodash.pick": "^4.4.0",
     "next": "14.0.4",
     "next-intl": "^3.4.4",
     "react": "^18",
@@ -30,6 +31,7 @@
     "tailwind-config": "workspace:*"
   },
   "devDependencies": {
+    "@types/lodash.pick" :"^4.4.9",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

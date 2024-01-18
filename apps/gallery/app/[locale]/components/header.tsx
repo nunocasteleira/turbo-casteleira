@@ -20,7 +20,7 @@ export default function Header() {
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
+          <a href="/" className="-m-1.5 p-1.5">
             <h1 className="text-2xl text-slate-700 dark:text-slate-300">
               Nuno João Casteleira
             </h1>
