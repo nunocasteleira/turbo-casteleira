@@ -1,9 +1,15 @@
 export type Project = {
   title: string;
-  className: string;
+  className?: string;
+  coverImgUrl?: string;
+  alt?: string;
 };
 
 export const projects: Project[] = [
+  {
+    title: "Porto Landscapes",
+    coverImgUrl: "/DSCF2335_rudubi",
+  },
   {
     title: "test",
     className: "bg-yellow-500",

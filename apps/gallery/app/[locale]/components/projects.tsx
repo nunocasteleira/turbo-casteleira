@@ -1,5 +1,4 @@
 import React from "react";
-import clsx from "clsx";
 import { projects } from "@/app/[locale]/projects";
 import Project from "./project";
 
