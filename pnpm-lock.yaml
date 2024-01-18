@@ -83,6 +83,9 @@ importers:
       tailwind-config:
         specifier: workspace:*
         version: link:../../packages/tailwind-config
+      webpack:
+        specifier: ^5.89.0
+        version: 5.89.0
     devDependencies:
       '@types/lodash.pick':
         specifier: ^4.4.9

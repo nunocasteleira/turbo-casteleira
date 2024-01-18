@@ -28,7 +28,8 @@
     "react": "^18",
     "react-dom": "^18",
     "socials": "workspace:*",
-    "tailwind-config": "workspace:*"
+    "tailwind-config": "workspace:*",
+    "webpack": "^5.89.0"
   },
   "devDependencies": {
     "@types/lodash.pick" :"^4.4.9",
