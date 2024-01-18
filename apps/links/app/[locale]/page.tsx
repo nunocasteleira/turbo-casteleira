@@ -6,9 +6,9 @@ import { promises as fs } from "fs";
 import Image from "next/image";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import { SocialLink, socials } from "socials";
 import { locales } from "@/locale-config";
 import { Link } from "@/navigation";
-import { SocialLink, socials } from "../../../../packages/socials";
 
 export default async function Home({
   params: { locale },
