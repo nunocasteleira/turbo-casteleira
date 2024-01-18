@@ -8,13 +8,15 @@
     "skipToContent": "Saltar para conteúdo"
   },
   "Index": {
-    "title": "Projetos",
-    "image-alt": "Retrato de Nuno João Casteleira",
-    "translate": "Read it in English"
+    "title": "Projetos"
   },
   "Metadata": {
     "title": "Nuno João Casteleira",
     "author": "Nuno João Casteleira",
     "description": "Uma galeria de fotos"
+  },
+  "Projects": {
+    "cover": "Imagem de capa do projeto {projectName}.",
+    "coverAlt": "Imagem de capa do projeto {projectName}: {alt}."
   }
 }

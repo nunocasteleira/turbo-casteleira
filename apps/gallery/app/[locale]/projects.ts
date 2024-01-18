@@ -1,29 +1,39 @@
 export type Project = {
-  title: string;
-  className?: string;
-  coverImgUrl?: string;
   alt?: string;
+  coverImgUrl: string;
+  slug: string;
+  title: string;
 };
 
 export const projects: Project[] = [
   {
-    title: "Porto Landscapes",
     coverImgUrl: "/DSCF2335_rudubi",
+    title: "Ponte D. Luís",
+    slug: "ponte-d-luis",
   },
   {
-    title: "test",
-    className: "bg-yellow-500",
+    coverImgUrl: "/DSCF2238_pbfwnq",
+    title: "Bolhão",
+    slug: "bolhao",
   },
   {
-    title: "test",
-    className: "bg-red-500",
+    coverImgUrl: "/DSCF2411_avd2w7",
+    title: "Câmara",
+    slug: "camara",
   },
   {
-    title: "test",
-    className: "bg-green-500",
+    coverImgUrl: "/DSCF2231_iwjee1",
+    title: "Telhados",
+    slug: "telhados",
   },
   {
-    title: "test",
-    className: "bg-lime-500",
+    coverImgUrl: "/DSCF2239_ppxfl7",
+    title: "Vinho do Porto",
+    slug: "vinho-do-porto",
+  },
+  {
+    coverImgUrl: "/DSCF2335_1_ttwqsl",
+    title: "Ribeira",
+    slug: "ribeira",
   },
 ];

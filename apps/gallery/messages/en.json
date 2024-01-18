@@ -14,5 +14,9 @@
     "title": "Nuno João Casteleira",
     "author": "Nuno João Casteleira",
     "description": "A photo gallery"
+  },
+  "Projects": {
+    "coverAlt": "Cover image of project {projectName}: {alt}.",
+    "cover": "Cover image of project {projectName}."
   }
 }
