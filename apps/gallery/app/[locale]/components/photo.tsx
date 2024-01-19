@@ -1,8 +1,8 @@
 "use client";
 
+import React from "react";
 import clsx from "clsx";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
 import cloudinaryLoader from "@/app/cloudinary-loader";
 
 type Props = {
@@ -10,19 +10,17 @@ type Props = {
   className?: string;
   priority?: boolean;
   src: string;
+  children?: React.ReactNode;
 };
 
-const Photo = ({ alt, className, src, priority }: Props) => {
-  const t = useTranslations("Captions");
-  const caption = t(src as any);
-
+const Photo = ({ alt, className, children, src, priority }: Props) => {
   return (
     <figure>
       <div
         className={clsx("relative block overflow-hidden rounded-lg", className)}
       >
         <Image
-          alt={alt ?? caption}
+          alt={alt}
           fill
           loader={cloudinaryLoader}
           sizes="80vw"
@@ -31,7 +29,7 @@ const Photo = ({ alt, className, src, priority }: Props) => {
           priority={priority}
         />
       </div>
-      {caption ? <figcaption>{caption}</figcaption> : null}
+      {children ? <figcaption>{children}</figcaption> : null}
     </figure>
   );
 };
