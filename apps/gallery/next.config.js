@@ -1,13 +1,6 @@
 const withNextIntl = require("next-intl/plugin")();
-const withMDX = require("@next/mdx")();
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  experimental: {
-    mdxRs: true,
-  },
-  // Configure `pageExtensions` to include MDX files
-  pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
-};
+const nextConfig = {};
 
-module.exports = withNextIntl(withMDX(nextConfig));
+module.exports = withNextIntl(nextConfig);
