@@ -33,7 +33,7 @@ export const projects: Project[] = [
   },
   {
     coverImgUrl: "/DSCF2335_1_ttwqsl",
-    title: "Ribeira",
-    slug: "ribeira",
+    title: "Foz",
+    slug: "foz",
   },
 ];
