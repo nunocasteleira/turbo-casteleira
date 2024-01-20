@@ -45,7 +45,7 @@ export default async function LocaleLayout({
       >
         <Header />
         {children}
-        <Footer />
+        <Footer locale={locale} />
       </body>
     </html>
   );

@@ -1,15 +1,17 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { GlobeEuropeAfricaIcon } from "@heroicons/react/24/outline";
 import clsx from "clsx";
 import { getTranslations } from "next-intl/server";
 import { SocialLink, socials } from "socials";
 import { Link } from "@/navigation";
+import { LocaleLink } from "./locale-link";
 
 const navigation = {
   main: [{ name: "Links", href: "https://links.casteleira.xyz" }],
 };
 
-export default async function Footer() {
+export default async function Footer({ locale }: { locale: string }) {
   const t = await getTranslations("Footer");
   const tMeta = await getTranslations("Metadata");
 
@@ -18,12 +20,13 @@ export default async function Footer() {
       <div className="page-size overflow-hidden py-20 sm:py-24">
         <nav className="flex justify-center space-x-12" aria-label="Footer">
           {navigation.main.map((item) => (
-            <div key={item.name} className="pb-6">
+            <div key={item.name}>
               <a href={item.href} className="text-sm leading-6">
                 {item.name}
               </a>
             </div>
           ))}
+          <LocaleLink locale={locale} label={t("translate")} />
         </nav>
         <SocialLinks />
         <p className="mt-10 text-center text-xs leading-5 text-gray-500">

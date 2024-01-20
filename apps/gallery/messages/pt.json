@@ -1,7 +1,8 @@
 {
   "Footer": {
     "allRightsReserved": "Todos os direitos reservados.",
-    "footer": "Rodapé"
+    "footer": "Rodapé",
+    "translate": "Read it in English"
   },
   "Header": {
     "header": "Cabeçalho",
