@@ -1,6 +1,5 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { GlobeEuropeAfricaIcon } from "@heroicons/react/24/outline";
 import clsx from "clsx";
 import { getTranslations } from "next-intl/server";
 import { SocialLink, socials } from "socials";

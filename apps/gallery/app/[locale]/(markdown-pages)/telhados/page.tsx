@@ -1,6 +1,6 @@
 import React from "react";
 import { unstable_setRequestLocale } from "next-intl/server";
-import MdxPage from "@/app/[locale]/(markdown-pages)/components/mdx-page";
+import MdxPage from "@/app/[locale]/(markdown-pages)/mdx-page";
 
 export default async function TelhadosPage({
   params: { locale },
@@ -9,5 +9,5 @@ export default async function TelhadosPage({
 }) {
   unstable_setRequestLocale(locale);
 
-  return <MdxPage folder="telhados" locale={locale} />;
+  return <MdxPage slug="telhados" locale={locale} />;
 }
