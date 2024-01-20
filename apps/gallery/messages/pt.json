@@ -1,7 +1,8 @@
 {
   "Footer": {
     "allRightsReserved": "Todos os direitos reservados.",
-    "footer": "Rodapé"
+    "footer": "Rodapé",
+    "translate": "Read it in English"
   },
   "Header": {
     "header": "Cabeçalho",
@@ -14,6 +15,11 @@
     "title": "Nuno João Casteleira",
     "author": "Nuno João Casteleira",
     "description": "Uma galeria de fotos"
+  },
+  "NotFoundPage": {
+    "backHome": "Voltar à página principal",
+    "description": "Não conseguimos encontrar este pedido",
+    "title": "Não encontrado"
   },
   "Projects": {
     "cover": "Imagem de capa do projeto {projectName}.",

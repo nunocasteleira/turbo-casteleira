@@ -3,8 +3,8 @@ import clsx from "clsx";
 import { GeistSans } from "geist/font/sans";
 import type { Metadata } from "next";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
-import Footer from "@/app/[locale]/components/footer";
 import { locales } from "@/locale-config";
+import Footer from "./components/footer";
 import Header from "./components/header";
 
 export const generateMetadata = async ({
@@ -45,7 +45,7 @@ export default async function LocaleLayout({
       >
         <Header />
         {children}
-        <Footer />
+        <Footer locale={locale} />
       </body>
     </html>
   );

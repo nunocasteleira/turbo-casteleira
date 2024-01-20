@@ -1,7 +1,8 @@
 {
   "Footer": {
     "allRightsReserved": "All rights reserved.",
-    "footer": "Footer"
+    "footer": "Footer",
+    "translate": "Ler em Português"
   },
   "Header": {
     "header": "Header",
@@ -14,6 +15,11 @@
     "title": "Nuno João Casteleira",
     "author": "Nuno João Casteleira",
     "description": "A photo gallery"
+  },
+  "NotFoundPage": {
+    "backHome": "Return Home",
+    "title": "Not Found",
+    "description": "Could not find requested resource"
   },
   "Projects": {
     "coverAlt": "Cover image of project {projectName}: {alt}.",
