@@ -1,7 +1,7 @@
 import React from "react";
 import { promises as fs } from "fs";
 import { MDXRemote } from "next-mdx-remote/rsc";
-import Photo from "@/app/[locale]/components/photo";
+import Photo from "./photo";
 
 const components = { Photo };
 
