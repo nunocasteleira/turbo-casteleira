@@ -15,6 +15,11 @@
     "author": "Nuno João Casteleira",
     "description": "Uma galeria de fotos"
   },
+  "NotFoundPage": {
+    "backHome": "Voltar à página principal",
+    "description": "Não conseguimos encontrar este pedido",
+    "title": "Não encontrado"
+  },
   "Projects": {
     "cover": "Imagem de capa do projeto {projectName}.",
     "coverAlt": "Imagem de capa do projeto {projectName}: {alt}."

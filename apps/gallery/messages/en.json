@@ -15,6 +15,11 @@
     "author": "Nuno João Casteleira",
     "description": "A photo gallery"
   },
+  "NotFoundPage": {
+    "backHome": "Return Home",
+    "title": "Not Found",
+    "description": "Could not find requested resource"
+  },
   "Projects": {
     "coverAlt": "Cover image of project {projectName}: {alt}.",
     "cover": "Cover image of project {projectName}."

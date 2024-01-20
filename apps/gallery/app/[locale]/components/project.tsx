@@ -2,8 +2,8 @@
 
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 import cloudinaryLoader from "@/app/cloudinary-loader";
+import { Link } from "@/navigation";
 import { Project } from "../projects";
 
 function ProjectComponent({ project }: { project: Project }) {
