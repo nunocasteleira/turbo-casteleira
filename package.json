@@ -7,14 +7,17 @@
   "private": true,
   "scripts": {
     "build": "turbo run build",
+    "build:links": "turbo run build --filter=links...",
     "dev": "turbo run dev",
-    "dev:xyz": "turbo run dev --filter=xyz...",
+    "dev:links": "turbo run dev --filter=links...",
     "dev:story": "turbo run dev --filter=workshop...",
     "dev:ui": "turbo run dev --filter=ui",
+    "dev:xyz": "turbo run dev --filter=xyz...",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "turbo run lint",
-    "typecheck": "turbo run typecheck",
-    "preinstall": "npx only-allow pnpm"
+    "preinstall": "npx only-allow pnpm",
+    "start:links": "turbo run start --filter=links...",
+    "typecheck": "turbo run typecheck"
   },
   "devDependencies": {
     "eslint": "^8.56.0",
