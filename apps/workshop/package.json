@@ -11,7 +11,7 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "ui": "workspace:*"
+    "ui": "*"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.6.8",
@@ -34,7 +34,7 @@
     "eslint-plugin-storybook": "^0.6.15",
     "prop-types": "^15.8.1",
     "storybook": "^7.6.8",
-    "tsconfig": "workspace:*",
+    "tsconfig": "*",
     "typescript": "^5.3.3",
     "vite": "^5.0.11"
   }

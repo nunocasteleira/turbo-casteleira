@@ -18,18 +18,18 @@
     "next": "^14.0.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "ui": "workspace:*"
+    "ui": "*"
   },
   "devDependencies": {
     "@types/node": "^20.11.0",
     "@types/react": "^18.2.47",
     "@types/react-dom": "^18.2.18",
     "autoprefixer": "^10.4.16",
-    "eslint-config-custom": "workspace:*",
+    "eslint-config-custom": "*",
     "postcss": "^8.4.33",
-    "tailwind-config": "workspace:*",
+    "tailwind-config": "*",
     "tailwindcss": "^3.4.1",
-    "tsconfig": "workspace:*",
+    "tsconfig": "*",
     "typescript": "^5.3.3"
   }
 }

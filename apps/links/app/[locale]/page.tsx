@@ -6,7 +6,7 @@ import { promises as fs } from "fs";
 import Image from "next/image";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import { MDXRemote } from "next-mdx-remote/rsc";
-import { SocialLink, socials } from "socials";
+import { SocialLink as SocialLinkType, socials } from "socials";
 import { locales } from "@/locale-config";
 import { Link } from "@/navigation";
 
@@ -53,7 +53,7 @@ export default async function Home({
   );
 }
 
-async function SocialLink({ link }: { link: SocialLink }) {
+async function SocialLink({ link }: { link: SocialLinkType }) {
   const t = await getTranslations("Links");
   const Comp = "href" in link ? Link : "div";
 
