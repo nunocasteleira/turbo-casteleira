@@ -3,19 +3,21 @@
 @tailwind utilities;
 
 @layer base {
-    h1 {
-        @apply ui-font-serif ui-text-2xl;
-    }
+  h1 {
+    @apply ui-font-serif ui-text-2xl;
+  }
 
-    h2 {
-        @apply ui-font-serif ui-text-xl;
-    }
+  h2 {
+    @apply ui-font-serif ui-text-xl;
+  }
 
-    h3 {
-        @apply ui-font-serif ui-text-lg;
-    }
+  h3 {
+    @apply ui-font-serif ui-text-lg;
+  }
 
-    h4, h5, h6 {
-        @apply ui-font-serif
-    }
+  h4,
+  h5,
+  h6 {
+    @apply ui-font-serif;
+  }
 }

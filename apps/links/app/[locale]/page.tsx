@@ -4,28 +4,30 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import clsx from "clsx";
 import { promises as fs } from "fs";
 import Image from "next/image";
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
-import { MDXRemote } from "next-mdx-remote/rsc";
+import Link from "next/link";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { SocialLink as SocialLinkType, socials } from "socials";
-import { locales } from "@/locale-config";
-import { Link } from "@/navigation";
+import { Mdx } from "@/components/mdx";
+import { locales } from "@/i18n/routing";
 
-export default async function Home({
-  params: { locale },
-}: {
-  params: { locale: string };
+export default async function Home(props: {
+  params: Promise<{ locale: string }>;
 }) {
-  unstable_setRequestLocale(locale);
+  const params = await props.params;
+
+  const { locale } = params;
+
+  setRequestLocale(locale);
   const file = await fs.readFile(
     process.cwd() + `/app/[locale]/text/${locale}.mdx`,
     "utf8",
   );
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-8 [&_*]:min-w-0">
+    <main className="**:min-w-0 flex min-h-screen flex-col items-center justify-between p-8">
       <div className="flex max-w-md flex-col overflow-hidden rounded-lg bg-slate-200 text-slate-900 shadow-xl dark:bg-slate-800">
         <div className="h-full w-full flex-auto">
-          <div className="relative aspect-[4/3] h-full w-full">
+          <div className="aspect-4/3 relative h-full w-full">
             <Image
               alt="Headshot of Nuno João Casteleira"
               className="h-full w-full object-cover"
@@ -38,7 +40,7 @@ export default async function Home({
         </div>
         <div className="min-h-full w-full flex-auto px-8 py-8">
           <div className="markdown">
-            <MDXRemote source={file} />
+            <Mdx source={file} />
           </div>
           <ul className="flex flex-row justify-between gap-6">
             {socials.map((link) => (
@@ -55,12 +57,12 @@ export default async function Home({
 
 async function SocialLink({ link }: { link: SocialLinkType }) {
   const t = await getTranslations("Links");
-  const Comp = "href" in link ? Link : "div";
+  const Comp = typeof "href" !== "undefined" ? Link : "div";
 
   return (
     <li className="rounded-full dark:text-slate-200">
       <Comp
-        href={link.href ?? ""}
+        href={link.href ?? "/"}
         className={clsx("flex h-6 w-6", link.className)}
         aria-labelledby={`${link.social}-alt`}
       >

@@ -14,8 +14,8 @@ type Socials = "linkedin" | "code" | "github" | "music" | "photos";
 export type SocialLink = {
   icon: IconDefinition;
   social: Socials;
-  href?: string;
   className?: string;
+  href?: string;
 };
 
 export const socials: SocialLink[] = [

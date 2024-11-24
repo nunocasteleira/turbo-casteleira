@@ -2,9 +2,9 @@ import React from "react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import clsx from "clsx";
 import { promises as fs } from "fs";
-import { MDXRemote } from "next-mdx-remote/rsc";
+import { Mdx } from "@/app/[locale]/components/mdx";
 import { Project, projects } from "@/app/[locale]/projects";
-import { Link } from "@/navigation";
+import { Link } from "@/i18n/routing";
 import Photo from "./photo";
 
 const components = { Photo };
@@ -23,7 +23,7 @@ export default async function MdxPage({
 
   return (
     <>
-      <MDXRemote source={file} components={components} />
+      <Mdx source={file} components={components} />
       <ProjectsFooter slug={slug} />
     </>
   );

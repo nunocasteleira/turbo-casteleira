@@ -10,34 +10,38 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.5.1",
-    "@fortawesome/free-brands-svg-icons": "^6.5.1",
-    "@fortawesome/free-solid-svg-icons": "^6.5.1",
-    "@fortawesome/react-fontawesome": "^0.2.0",
-    "@headlessui/react": "^1.7.18",
-    "@heroicons/react": "^2.1.1",
-    "clsx": "^2.1.0",
-    "geist": "^1.2.1",
-    "lodash.pick": "^4.4.0",
-    "next": "14.0.4",
+    "@fortawesome/fontawesome-svg-core": "^6.7.1",
+    "@fortawesome/free-brands-svg-icons": "^6.7.1",
+    "@fortawesome/free-solid-svg-icons": "^6.7.1",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@headlessui/react": "^2.2.0",
+    "@heroicons/react": "^2.2.0",
+    "clsx": "^2.1.1",
+    "geist": "^1.3.1",
+    "lodash.pick": "^3.1.0",
+    "next": "15.0.3",
     "next-intl": "^3.4.4",
-    "next-mdx-remote": "^4.4.1",
-    "react": "^18",
-    "react-dom": "^18",
+    "next-mdx-remote": "^5.0.0",
+    "react": "19.0.0-rc-66855b96-20241106",
+    "react-dom": "19.0.0-rc-66855b96-20241106",
     "socials": "*",
     "tailwind-config": "*",
-    "webpack": "^5.89.0"
+    "webpack": "^5.96.1"
   },
   "devDependencies": {
-    "@types/lodash.pick" :"^4.4.9",
+    "@tailwindcss/postcss": "^4.0.0-beta.2",
+    "@types/lodash.pick": "^4.4.9",
     "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "autoprefixer": "^10.0.1",
-    "eslint": "^8",
+    "@types/react": "npm:types-react@19.0.0-rc.1",
+    "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1",
+    "eslint": "^8.56.0",
     "eslint-config-custom": "*",
     "postcss": "^8",
-    "tailwindcss": "^3.3.0",
+    "tailwindcss": "^4.0.0-beta.2",
     "typescript": "^5.3.3"
+  },
+  "overrides": {
+    "@types/react": "npm:types-react@19.0.0-rc.1",
+    "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1"
   }
 }

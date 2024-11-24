@@ -2,16 +2,18 @@ import React from "react";
 import clsx from "clsx";
 import { GeistSans } from "geist/font/sans";
 import type { Metadata } from "next";
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
-import { locales } from "@/locale-config";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { locales } from "@/i18n/routing";
 import Footer from "./components/footer";
 import Header from "./components/header";
 
-export const generateMetadata = async ({
-  params: { locale },
-}: {
-  params: { locale: string };
+export const generateMetadata = async (props: {
+  params: Promise<{ locale: string }>;
 }): Promise<Metadata> => {
+  const params = await props.params;
+
+  const { locale } = params;
+
   const t = await getTranslations({ locale, namespace: "Metadata" });
 
   return {
@@ -24,14 +26,17 @@ export const generateMetadata = async ({
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
-export default async function LocaleLayout({
-  children,
-  params: { locale },
-}: {
+export default async function LocaleLayout(props: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  unstable_setRequestLocale(locale);
+  const params = await props.params;
+
+  const { locale } = params;
+
+  const { children } = props;
+
+  setRequestLocale(locale);
 
   return (
     <html lang={locale}>

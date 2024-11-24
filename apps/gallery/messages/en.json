@@ -24,5 +24,12 @@
   "Projects": {
     "coverAlt": "Cover image of project {projectName}: {alt}.",
     "cover": "Cover image of project {projectName}."
+  },
+  "Links": {
+    "linkedin": "LinkedIn",
+    "code": "Coding Projects",
+    "github": "GitHub",
+    "music": "Music Portfolio",
+    "photos": "Photography Portfolio"
   }
 }

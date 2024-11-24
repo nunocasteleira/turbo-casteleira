@@ -20,7 +20,7 @@ const Photo = ({ alt, className, children, src, priority }: Props) => {
         className={clsx("relative block overflow-hidden rounded-lg", className)}
       >
         <Image
-          alt={alt}
+          alt={(children as string) ?? alt}
           fill
           loader={cloudinaryLoader}
           sizes="80vw"
@@ -29,7 +29,6 @@ const Photo = ({ alt, className, children, src, priority }: Props) => {
           priority={priority}
         />
       </div>
-      {children ? <figcaption>{children}</figcaption> : null}
     </figure>
   );
 };

@@ -2,8 +2,7 @@
 
 import React from "react";
 import { GlobeEuropeAfricaIcon } from "@heroicons/react/24/outline";
-import { locales } from "@/locale-config";
-import { Link, usePathname } from "@/navigation";
+import { Link, locales, usePathname } from "@/i18n/routing";
 
 export function LocaleLink({
   locale,
