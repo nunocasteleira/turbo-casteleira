@@ -1,9 +1,9 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import clsx from "clsx";
+import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import { SocialLink, socials } from "socials";
-import { Link } from "@/navigation";
 import { LocaleLink } from "./locale-link";
 
 const navigation = {

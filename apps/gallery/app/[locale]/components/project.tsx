@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import cloudinaryLoader from "@/app/cloudinary-loader";
-import { Link } from "@/navigation";
+import { Link } from "@/i18n/routing";
 import { Project } from "../projects";
 
 function ProjectComponent({ project }: { project: Project }) {
@@ -20,7 +20,7 @@ function ProjectComponent({ project }: { project: Project }) {
         />
 
         <Link
-          href={project.slug}
+          href={project.slug as any}
           className="absolute inset-0 focus:outline-none"
         >
           <span className="sr-only">View details for {project.title}</span>
