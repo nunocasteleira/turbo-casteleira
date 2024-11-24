@@ -24,10 +24,10 @@ export default async function Home(props: {
   );
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-8 [&_*]:min-w-0">
+    <main className="**:min-w-0 flex min-h-screen flex-col items-center justify-between p-8">
       <div className="flex max-w-md flex-col overflow-hidden rounded-lg bg-slate-200 text-slate-900 shadow-xl dark:bg-slate-800">
         <div className="h-full w-full flex-auto">
-          <div className="relative aspect-[4/3] h-full w-full">
+          <div className="aspect-4/3 relative h-full w-full">
             <Image
               alt="Headshot of Nuno João Casteleira"
               className="h-full w-full object-cover"

@@ -21,7 +21,7 @@ function ProjectComponent({ project }: { project: Project }) {
 
         <Link
           href={project.slug as any}
-          className="absolute inset-0 focus:outline-none"
+          className="focus:outline-hidden absolute inset-0"
         >
           <span className="sr-only">View details for {project.title}</span>
         </Link>

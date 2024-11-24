@@ -13,7 +13,7 @@
     "dev:story": "turbo run dev --filter=workshop...",
     "dev:ui": "turbo run dev --filter=ui",
     "dev:xyz": "turbo run dev --filter=xyz...",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "format": "prettier --write \"**/*.{ts,tsx,md,css}\"",
     "lint": "turbo run lint",
     "start:links": "turbo run start --filter=links",
     "typecheck": "turbo run typecheck"

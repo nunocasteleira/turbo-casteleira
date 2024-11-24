@@ -48,7 +48,6 @@ async function SocialLinks() {
 }
 
 async function SocialLinkComponent({ link }: { link: SocialLink }) {
-  // @ts-expect-error
   const t = await getTranslations("Links");
   const Comp = "href" in link ? Link : "div";
 
@@ -61,7 +60,6 @@ async function SocialLinkComponent({ link }: { link: SocialLink }) {
       >
         <FontAwesomeIcon icon={link.icon} />
         <span className="sr-only" id={`${link.social}-alt`}>
-          {/* @ts-expect-error */}
           {t(link.social)}
         </span>
       </Comp>
