@@ -6,15 +6,17 @@ import { promises as fs } from "fs";
 import Image from "next/image";
 import Link from "next/link";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { MDXRemote } from "next-mdx-remote/rsc";
 import { SocialLink as SocialLinkType, socials } from "socials";
+import { Mdx } from "@/components/mdx";
 import { locales } from "@/i18n/routing";
 
-export default async function Home({
-  params: { locale },
-}: {
-  params: { locale: string };
+export default async function Home(props: {
+  params: Promise<{ locale: string }>;
 }) {
+  const params = await props.params;
+
+  const { locale } = params;
+
   setRequestLocale(locale);
   const file = await fs.readFile(
     process.cwd() + `/app/[locale]/text/${locale}.mdx`,
@@ -38,7 +40,7 @@ export default async function Home({
         </div>
         <div className="min-h-full w-full flex-auto px-8 py-8">
           <div className="markdown">
-            <MDXRemote source={file} />
+            <Mdx source={file} />
           </div>
           <ul className="flex flex-row justify-between gap-6">
             {socials.map((link) => (
