@@ -1,8 +1,8 @@
 import React from "react";
 import { GeistSans } from "geist/font/sans";
 import type { Metadata } from "next";
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
-import { locales } from "@/locale-config";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { locales } from "@/i18n/routing";
 
 export const generateMetadata = async ({
   params: { locale },
@@ -28,7 +28,7 @@ export default function LocaleLayout({
   children: React.ReactNode;
   params: { locale: string };
 }) {
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
 
   return (
     <html lang={locale}>

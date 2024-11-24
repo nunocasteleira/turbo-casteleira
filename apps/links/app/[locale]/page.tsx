@@ -4,18 +4,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import clsx from "clsx";
 import { promises as fs } from "fs";
 import Image from "next/image";
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import Link from "next/link";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { SocialLink as SocialLinkType, socials } from "socials";
-import { locales } from "@/locale-config";
-import { Link } from "@/navigation";
+import { locales } from "@/i18n/routing";
 
 export default async function Home({
   params: { locale },
 }: {
   params: { locale: string };
 }) {
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
   const file = await fs.readFile(
     process.cwd() + `/app/[locale]/text/${locale}.mdx`,
     "utf8",
@@ -55,12 +55,12 @@ export default async function Home({
 
 async function SocialLink({ link }: { link: SocialLinkType }) {
   const t = await getTranslations("Links");
-  const Comp = "href" in link ? Link : "div";
+  const Comp = typeof "href" !== "undefined" ? Link : "div";
 
   return (
     <li className="rounded-full dark:text-slate-200">
       <Comp
-        href={link.href ?? ""}
+        href={link.href ?? "/"}
         className={clsx("flex h-6 w-6", link.className)}
         aria-labelledby={`${link.social}-alt`}
       >
