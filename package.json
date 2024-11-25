@@ -13,7 +13,7 @@
     "dev:story": "turbo run dev --filter=workshop...",
     "dev:ui": "turbo run dev --filter=ui",
     "dev:xyz": "turbo run dev --filter=xyz...",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "format": "prettier --write \"**/*.{ts,tsx,md,css}\"",
     "lint": "turbo run lint",
     "start:links": "turbo run start --filter=links",
     "typecheck": "turbo run typecheck"
@@ -29,5 +29,10 @@
     "apps/*",
     "packages/*"
   ],
-  "name": "turbo-casteleira"
+  "name": "turbo-casteleira",
+  "packageManager": "npm@10.2.4",
+  "overrides": {
+    "@types/react": "npm:types-react@19.0.0-rc.1",
+    "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1"
+  }
 }

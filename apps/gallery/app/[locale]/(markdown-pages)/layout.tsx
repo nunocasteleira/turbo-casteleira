@@ -1,16 +1,19 @@
-import React from "react";
+import React, { use } from "react";
 import pick from "lodash.pick";
 import { NextIntlClientProvider, useMessages } from "next-intl";
-import { unstable_setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 
-export default function MdxLayout({
-  children,
-  params: { locale },
-}: {
+export default function MdxLayout(props: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  unstable_setRequestLocale(locale);
+  const params = use(props.params);
+
+  const { locale } = params;
+
+  const { children } = props;
+
+  setRequestLocale(locale);
   const messages = useMessages();
 
   return (

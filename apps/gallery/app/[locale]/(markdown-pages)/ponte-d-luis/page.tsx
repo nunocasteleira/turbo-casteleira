@@ -1,13 +1,15 @@
 import React from "react";
-import { unstable_setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import MdxPage from "@/app/[locale]/(markdown-pages)/mdx-page";
 
-export default async function PonteDLuisPage({
-  params: { locale },
-}: {
-  params: { locale: string };
+export default async function PonteDLuisPage(props: {
+  params: Promise<{ locale: string }>;
 }) {
-  unstable_setRequestLocale(locale);
+  const params = await props.params;
+
+  const { locale } = params;
+
+  setRequestLocale(locale);
 
   return <MdxPage slug="ponte-d-luis" locale={locale} />;
 }

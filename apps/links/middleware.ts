@@ -1,15 +1,10 @@
 import createMiddleware from "next-intl/middleware";
-import { locales } from "./locale-config";
+import { routing } from "@/i18n/routing";
 
-export default createMiddleware({
-  // A list of all locales that are supported
-  locales,
-
-  //Used when no locale matches
-  defaultLocale: "en",
-});
+export default createMiddleware(routing);
 
 export const config = {
+  // Match only internationalized pathnames
   matcher: [
     // Enable a redirect to a matching locale at the root
     "/",
@@ -20,6 +15,6 @@ export const config = {
 
     // Enable redirects that add missing locales
     // (e.g. `/pathnames` -> `/en/pathnames`)
-    "/((?!_next|_vercel|.*\\..*).*)",
+    "/((?!_next|_vercel|icon|apple-icon|.*\\..*).*)",
   ],
 };
