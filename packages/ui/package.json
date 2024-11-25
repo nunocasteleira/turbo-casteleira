@@ -22,7 +22,7 @@
     "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1",
     "eslint": "^8.56.0",
     "eslint-config-custom": "*",
-    "react": "19.0.0-rc-66855b96-20241106",
+    "react": "19.0.0-rc.1",
     "tailwind-config": "*",
     "tsconfig": "*",
     "tsup": "^8.0.1",
